@@ -10,6 +10,7 @@ interface NavigateToOptions {
        "/pages/create-uni/index" |
        "/pages/feedback/index" |
        "/pages/icon/index" |
+       "/pages/login/index" |
        "/pages/pinia/index" |
        "/pages/request/index" |
        "/pages/router/demo-aftereach" |

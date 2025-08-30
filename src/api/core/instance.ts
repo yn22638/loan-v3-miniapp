@@ -6,7 +6,7 @@ import { handleAlovaError, handleAlovaResponse } from './handlers'
 
 export const alovaInstance = createAlova({
   // 基础URL - 支持环境变量配置
-  baseURL: import.meta.env.VITE_API_BASE_URL || 'http://loan-app-zfb-api.pipiyigou.com/zfb',
+  baseURL: import.meta.env.VITE_API_BASE_URL || 'https://test-zfb-api.pipiyigou.com/zfb',
   // 使用 uni-app 适配器，支持 Mock 数据
   ...AdapterUniapp({
     mockRequest: mockAdapter,

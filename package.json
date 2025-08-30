@@ -71,6 +71,7 @@
     "@dcloudio/uni-quickapp-webview": "3.0.0-4060620250520001",
     "@vueuse/core": "^11.0.3",
     "alova": "^3.3.4",
+    "crypto-js": "^4.2.0",
     "pinia": "^2.3.1",
     "vue": "~3.4.38",
     "vue-i18n": "^9.14.0",

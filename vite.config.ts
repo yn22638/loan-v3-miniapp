@@ -6,13 +6,14 @@ import UniHelperLayouts from '@uni-helper/vite-plugin-uni-layouts'
 import UniHelperComponents from '@uni-helper/vite-plugin-uni-components'
 import AutoImport from 'unplugin-auto-import/vite'
 import { WotResolver } from '@uni-helper/vite-plugin-uni-components/resolvers'
-
+// unplugin-vue-components
 // https://vitejs.dev/config/
 export default async () => {
   const UnoCSS = (await import('unocss/vite')).default
 
   return defineConfig({
     plugins: [
+
       // https://github.com/uni-helper/vite-plugin-uni-manifest
       UniHelperManifest(),
       // https://github.com/uni-helper/vite-plugin-uni-pages
@@ -65,6 +66,7 @@ export default async () => {
       // https://github.com/antfu/unocss
       // see unocss.config.ts for config
       UnoCSS(),
+
     ],
   })
 }

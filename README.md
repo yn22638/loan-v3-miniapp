@@ -29,9 +29,9 @@
 
 - 🦾 [TypeScript](https://www.typescriptlang.org/) & [ESLint](https://eslint.org/) - 保证代码质量
 
-- 🐂 [Wot UI](https://github.com/Moonofweisheng/wot-design-uni) - 基于 Vue3+TS 开发的 uni-app 组件库，提供 70+高质量组件，支持暗黑模式、国际化和自定义主题
+- 🐂 [Wot UI](https://github.com/Moonofweisheng/wot-design-uni) - 基于Vue3+TS开发的uni-app组件库，提供70+高质量组件，支持暗黑模式、国际化和自定义主题
 
-- 🎉 [Uni Mini Router](https://github.com/Moonofweisheng/uni-mini-router) - 适用于 uni-app&vue3 的轻量级路由库
+- 🎉 [Uni Mini Router](https://github.com/Moonofweisheng/uni-mini-router) - 适用于uni-app&vue3的轻量级路由库
 
 - 🎉 [Uni Mini CI](https://github.com/Moonofweisheng/uni-mini-ci) - 一个小程序端持续集成的插件
 

@@ -1,10 +1,5 @@
 /*
- * @Author: weisheng
- * @Date: 2023-05-20 10:00:00
- * @LastEditTime: 2025-05-21 15:46:14
- * @LastEditors: weisheng
- * @Description: Mock数据生成工具
- * @FilePath: /lsym-cx-mini/src/api/mock/utils/generators.ts
+Mock数据生成工具
  */
 
 // 模拟数据生成工具函数

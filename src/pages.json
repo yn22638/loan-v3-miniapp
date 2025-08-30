@@ -15,7 +15,7 @@
       "name": "about",
       "layout": "tabbar",
       "style": {
-        "navigationBarTitleText": "关于"
+        "navigationBarTitleText": ""
       }
     },
     {
@@ -48,6 +48,14 @@
       "name": "icon",
       "style": {
         "navigationBarTitleText": "图标演示"
+      }
+    },
+    {
+      "path": "pages/login/index",
+      "type": "page",
+      "name": "login",
+      "style": {
+        "navigationStyle": "custom"
       }
     },
     {

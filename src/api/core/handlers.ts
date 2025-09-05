@@ -18,10 +18,13 @@ export class ApiError extends Error {
 interface ApiResponse {
   code: number
   msg?: string
-  data?: any
+  entry?: any
   success?: boolean
   total?: number
   more?: boolean
+  status?: boolean
+  message: string
+  responseCode: string
 }
 
 // 处理成功响应
@@ -33,12 +36,13 @@ export async function handleAlovaResponse(
   const { statusCode, data } = response as UniNamespace.RequestSuccessCallbackResult
   console.log(statusCode, 'statusCodestatusCode')
 
-  // 处理401/403错误（如果不是在handleAlovaResponse中处理的）
-  if ((statusCode === 401 || statusCode === 403)) {
+  // 处理501错误（如果不是在handleAlovaResponse中处理的）
+  if (((data as ApiResponse).responseCode === '501')) {
     // 如果是未授权错误，清除用户信息并跳转到登录页
     globalToast.error({ msg: '登录已过期，请重新登录！', duration: 500 })
     const timer = setTimeout(() => {
       clearTimeout(timer)
+      uni.clearStorageSync()
       router.replaceAll({ name: 'login' })
     }, 500)
 
@@ -57,13 +61,18 @@ export async function handleAlovaResponse(
   if (import.meta.env.MODE === 'development') {
     console.log('[Alova Response]', json)
   }
-
+  if (!json.status) {
+    globalToast.error({ msg: json.message, duration: 500 })
+    throw new ApiError(json.message, statusCode, json)
+  }
   // Return data for successful responses
   return json
 }
 
 // 处理请求错误
 export function handleAlovaError(error: any, method: Method) {
+  // 暂未做处理
+  console.log(error, 'error')
   const globalToast = useGlobalToast()
   // Log error in development
   if (import.meta.env.MODE === 'development') {

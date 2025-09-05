@@ -175,7 +175,7 @@ function handleNavigate(url: string) {
         <view class="mb-3 text-10">
           🍍
         </view>
-        <view class="mb-2 text-6 text-gray-800 font-bold dark:text-[var(--wot-dark-color)]">
+        <view class="mb-2 bg-[var(--wot-color-btn-bg)] text-6 text-gray-800 font-bold dark:text-[var(--wot-dark-color)]">
           Pinia 状态管理
         </view>
         <view class="mb-2 text-3.5 text-gray-600 leading-relaxed dark:text-[var(--wot-dark-color2)]">

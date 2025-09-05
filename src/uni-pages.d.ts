@@ -5,12 +5,13 @@
 
 interface NavigateToOptions {
   url: "/pages/index/index" |
-       "/pages/about/index" |
+       "/pages/category/index" |
        "/pages/ci/index" |
        "/pages/create-uni/index" |
        "/pages/feedback/index" |
        "/pages/icon/index" |
        "/pages/login/index" |
+       "/pages/mine/index" |
        "/pages/pinia/index" |
        "/pages/request/index" |
        "/pages/router/demo-aftereach" |
@@ -21,12 +22,13 @@ interface NavigateToOptions {
        "/pages/router/demo-query" |
        "/pages/router/demo-string" |
        "/pages/router/index" |
+       "/pages/web-view/index" |
        "/subPages/styles/index";
 }
 interface RedirectToOptions extends NavigateToOptions {}
 
 interface SwitchTabOptions {
-  url: "/pages/index/index" | "/pages/about/index"
+  url: "/pages/index/index" | "/pages/category/index" | "/pages/mine/index"
 }
 
 type ReLaunchOptions = NavigateToOptions | SwitchTabOptions;

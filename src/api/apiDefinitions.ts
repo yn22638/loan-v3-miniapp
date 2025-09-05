@@ -45,6 +45,8 @@ export default {
   'user.deleteUser': ['DELETE', '/user/{username}'],
   // ----------
   'sms.sendVerifyCode': ['GET', '/app/getCode'],
-  'auth.reFindChatUrl': ['GET', '/auth/getChatUrl'],
   'sms.getVerificationCode': ['GET', '/app/getVerificationCode'],
+  'app.appLogin': ['POST', '/app/appLogin'],
+  'auth.reFindChatUrl': ['GET', '/zfb/auth/getChatUrl'],
+  'goods.getTopGoods': ['GET', '/zfb/goods/getTopGoods'],
 };

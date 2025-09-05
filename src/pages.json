@@ -6,16 +6,19 @@
       "name": "home",
       "layout": "tabbar",
       "style": {
-        "navigationBarTitleText": "首页"
+        "transparentTitle": "always",
+        "navigationStyle": "custom",
+        "enablePullDownRefresh": true
       }
     },
     {
-      "path": "pages/about/index",
+      "path": "pages/category/index",
       "type": "page",
-      "name": "about",
+      "name": "category",
       "layout": "tabbar",
       "style": {
-        "navigationBarTitleText": ""
+        "transparentTitle": "always",
+        "navigationStyle": "custom"
       }
     },
     {
@@ -55,6 +58,16 @@
       "type": "page",
       "name": "login",
       "style": {
+        "navigationStyle": "custom"
+      }
+    },
+    {
+      "path": "pages/mine/index",
+      "type": "page",
+      "name": "mine",
+      "layout": "ta bbar",
+      "style": {
+        "transparentTitle": "always",
         "navigationStyle": "custom"
       }
     },
@@ -137,12 +150,20 @@
       "style": {
         "navigationBarTitleText": "路由管理"
       }
+    },
+    {
+      "path": "pages/web-view/index",
+      "type": "page",
+      "name": "web-view",
+      "style": {
+        "navigationBarTitleText": ""
+      }
     }
   ],
   "globalStyle": {
     "navigationBarBackgroundColor": "@navBgColor",
     "navigationBarTextStyle": "@navTxtStyle",
-    "navigationBarTitleText": "test-demo",
+    "navigationBarTitleText": "",
     "backgroundColor": "@bgColor",
     "backgroundTextStyle": "@bgTxtStyle",
     "backgroundColorTop": "@bgColorTop",
@@ -166,7 +187,10 @@
         "pagePath": "pages/index/index"
       },
       {
-        "pagePath": "pages/about/index"
+        "pagePath": "pages/category/index"
+      },
+      {
+        "pagePath": "pages/mine/index"
       }
     ]
   },

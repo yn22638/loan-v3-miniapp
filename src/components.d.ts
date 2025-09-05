@@ -28,5 +28,6 @@ declare module 'vue' {
     WdTabbar: typeof import('wot-design-uni/components/wd-tabbar/wd-tabbar.vue')['default']
     WdTabbarItem: typeof import('wot-design-uni/components/wd-tabbar-item/wd-tabbar-item.vue')['default']
     WdToast: typeof import('wot-design-uni/components/wd-toast/wd-toast.vue')['default']
+    WebView: typeof import('./components/web-view/index.vue')['default']
   }
 }

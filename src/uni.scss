@@ -13,6 +13,16 @@
  */
 
 /* 颜色变量 */
+// 无效
+:root,
+page {
+  --wot-color-success: red;
+  --wot-color-warning: yellow;
+  --wot-button-normal-bg: green;
+  --wot-button-success-bg-color: blue;
+  --wot-color-success: blue;
+}
+
 
 /* 行为相关颜色 */
 $uni-color-primary: #007aff;

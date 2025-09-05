@@ -5,8 +5,9 @@ export function logout() {
   if (isLogouting)
     return
   isLogouting = true
-  // const userStore = useUserStore()
-  // userStore.$reset()
+  const userStore = useUserStore()
+  userStore.$reset()
+  uni.clearStorageSync()
   // const loginType = sessionStorage.getItem('loginType')
   sessionStorage.clear()
   localStorage.clear()

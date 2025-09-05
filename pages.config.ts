@@ -6,7 +6,7 @@ export default defineUniPages({
     // 导航栏配置
     navigationBarBackgroundColor: '@navBgColor',
     navigationBarTextStyle: '@navTxtStyle',
-    navigationBarTitleText: 'test-demo',
+    navigationBarTitleText: '',
 
     // 页面背景配置
     backgroundColor: '@bgColor',
@@ -34,10 +34,16 @@ export default defineUniPages({
     selectedColor: '@tabSelectedColor',
     backgroundColor: '@tabBgColor',
     borderStyle: '@tabBorderStyle',
-    list: [{
-      pagePath: 'pages/index/index',
-    }, {
-      pagePath: 'pages/about/index',
-    }],
+    list: [
+      {
+        pagePath: 'pages/index/index',
+      },
+      {
+        pagePath: 'pages/category/index',
+      },
+      {
+        pagePath: 'pages/mine/index',
+      },
+    ],
   },
 })

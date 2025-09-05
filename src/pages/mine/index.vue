@@ -11,19 +11,21 @@
     <div class="i-carbon-boot-volume text-origin-400" />
     <div class="i-carbon-logo-angular text-8xl" />
     <div class="i-carbon-sun dark:i-carbon-moon" />
-    <div
-      class="i-carbon-information hover:i-carbon-information-filled"
-    />
+    <div class="i-carbon-information hover:i-carbon-information-filled" />
   </view>
 </template>
 
+<style lang="scss" scoped>
+
+</style>
+
 <route lang="json">
 {
-  "name": "about",
-  "layout": "tabbar",
+  "name": "mine",
+  "layout": "ta bbar",
   "style": {
-    "navigationBarTitleText": ""
-
+    "transparentTitle": "always",
+    "navigationStyle": "custom"
   }
 }
 </route>

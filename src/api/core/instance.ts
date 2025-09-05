@@ -6,20 +6,33 @@ import { handleAlovaError, handleAlovaResponse } from './handlers'
 
 export const alovaInstance = createAlova({
   // 基础URL - 支持环境变量配置
-  baseURL: import.meta.env.VITE_API_BASE_URL || 'https://test-zfb-api.pipiyigou.com/zfb',
+  baseURL: import.meta.env.VITE_API_BASE_URL,
   // 使用 uni-app 适配器，支持 Mock 数据
   ...AdapterUniapp({
-    mockRequest: mockAdapter,
+    // mockRequest: mockAdapter,
     // 通过环境变量控制是否使用模拟请求适配器
-    // mockRequest: process.env.NODE_ENV === 'development' ? mockAdapter : undefined
+    mockRequest: import.meta.env.MODE === 'development' ? mockAdapter : undefined,
   }),
   // Vue 3 状态钩子
   statesHook: vueHook,
   // 全局请求拦截器
   beforeRequest: (method) => {
-    // Add content type for POST/PUT/PATCH requests
+    console.log('=== beforeRequest ===', method)
+    // 添加认证token
+    const token = uni.getStorageSync('token')
+    if (token) {
+      method.config.headers = {
+        ...method.config.headers,
+        XrentToken: token,
+      }
+    }
+
+    // 为POST/PUT/PATCH请求添加内容类型
     if (['POST', 'PUT', 'PATCH'].includes(method.type)) {
-      method.config.headers['Content-Type'] = 'application/json'
+      method.config.headers = {
+        ...method.config.headers,
+        'Content-Type': 'application/json',
+      }
     }
 
     // 为 GET 请求添加时间戳防止缓存
@@ -52,8 +65,8 @@ export const alovaInstance = createAlova({
   // We'll use the middleware in the hooks
   // middleware is not directly supported in createAlova options
 
-  // 请求超时时间（60秒）
-  timeout: 60000,
+  // 请求超时时间（10秒）
+  timeout: 1000 * 10,
   // 设置为null即可全局关闭全部请求缓存
   cacheFor: null,
 })

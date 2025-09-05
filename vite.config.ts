@@ -60,7 +60,7 @@ export default async () => {
         ],
         dts: 'src/auto-imports.d.ts',
         // 自动导入 src/api 目录下的所有导出
-        dirs: ['src/composables', 'src/store', 'src/utils', 'src/api'],
+        dirs: ['src/composables', 'src/store', 'src/utils', 'src/api', 'src/hooks'],
         vueTemplate: true,
       }),
       // https://github.com/antfu/unocss

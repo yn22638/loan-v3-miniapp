@@ -12,6 +12,10 @@ node_modules
 dist
 *.local
 
+# 自动生成的文件
+auto-imports.d.ts
+components.d.ts
+
 # Editor directories and files
 .idea
 *.suo
